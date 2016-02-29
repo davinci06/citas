@@ -1,0 +1,47 @@
+<% provide(:title, 'Sign up') %>
+<div class="jumbotron">
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+  	<div class="panel panel-success">
+        <div class="panel-heading">
+           <h3 class="panel-title">Create account</h3>
+            </div>
+            <div class="panel-body">
+		    <%= form_for(@user) do |f| %>
+		      <%= render 'shared/error_messages' %>
+
+		      <%= f.label :name %>
+		      <%= f.text_field :name, class: 'form-control' %>
+
+		      <%= f.label :email %>
+		      <%= f.email_field :email, class: 'form-control' %>
+
+		      <%= f.label :password %>
+		      <%= f.password_field :password, class: 'form-control' %>
+
+		      <%= f.label :password_confirmation, "Confirmation" %>
+		      <%= f.password_field :password_confirmation, class: 'form-control' %>
+		      
+		      <%= f.submit "Create my account", class: "btn btn-success btn-lg btn-block" %>
+		    <% end %>
+			<br>
+            <div class="radio">
+              <label class="exampleImputEmail">Soy: </label>
+			    <label>
+			      <input type="radio" name="optionsRadios" id="optionsRadios1" values="option1" checked> Medico
+                </label>
+			    <label>
+			      <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"> Paciente
+			    </label>
+			  </div>
+              <br>
+            <p class="text-center">¿Do you already have an account?</p>
+		<p class="text-center"> <%= link_to "log in", root_path, class: "label label-success" %></p>
+
+
+  			</div>
+        </div>
+  </div>
+</div>
+</div>
+

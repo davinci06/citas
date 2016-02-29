@@ -1,0 +1,43 @@
+<% provide(:title, @user.name) %>
+<div class="jumbotron">
+ <div class="row">
+  <div class="col-xs-12 col-md-8">
+    <div class="panel panel-success">
+        <div class="panel-heading">
+          <h3 class="panel-title"> Update your profile</h3>
+            </div>
+            <div class="panel-body">
+        <%= form_for(@user) do |f| %>
+          <%= render 'shared/error_messages' %>
+
+          <%= f.label :name %>
+          <%= f.text_field :name, class: 'form-control' %>
+
+          <%= f.label :email %>
+          <%= f.email_field :email, class: 'form-control' %>
+
+          <%= f.label :phone %>
+          <%= f.phone_field :phone, class: 'form-control' %>
+
+          
+          <%= f.label :phone %>
+          <%= f.phone_field :phone, class: 'form-control' %>
+
+          
+          <%= f.label :phone %>
+          <%= f.phone_field :phone, class: 'form-control' %>
+
+          
+          <%= f.label :phone %>
+          <%= f.phone_field :phone, class: 'form-control' %>
+
+          <%= f.submit "Save changes", class: "btn btn-success btn-lg btn-block" %>
+          <% end %>
+        </div>
+        </div>
+  </div>
+
+  <%= render 'layouts/menuaccount' %>
+
+  </div>
+</div>

@@ -1,0 +1,13 @@
+<div class='field'>
+		      
+		      <% nombres = {'Medico' => 'medico','Paciente' => 'Paciente' }%>
+		      <fieldset>
+		      
+		      <% lista = nombres.sort %>
+		      <% lista.each do | nombre | %>
+		      <%= f.radio_button :nombre, nombre[1] %>
+		      <label for="<%= nombre[1] %>"><%= nombre[0] %></label>
+		      <% end %>
+		      
+		      </fieldset>
+		  </div>

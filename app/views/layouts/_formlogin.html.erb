@@ -1,0 +1,18 @@
+<% provide(:title, "Log in") %>
+<div class="col-xs-6 col-md-4">
+    <h3>Tu salud es nuestra prioridad</h3>
+    cDoctor es el espacio perfecto para agendar tu cita
+    y revisar tu estado de salud.<br><br>
+       
+    <%= form_for(:session, url: login_path) do |f| %>
+        
+           <%= f.label :email %>
+           <%= f.email_field :email, class: 'form-control', placeholder: 'Email'%>
+        
+          <%= f.label :password %>
+          <%= f.password_field :password, class: 'form-control', placeholder: 'Password' %>
+
+        <%= f.submit "Log in", class: "btn btn-success btn-lg btn-block" %>
+      <% end %>
+  Haz clic en iniciar sesión, o bien <%= link_to "Regístrate!", signup_path %>
+  </div>

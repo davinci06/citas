@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  data: 2016-02-26
+  time: 2016-02-26 22:54:27
+  idpaciente_id: 
+  iddoctor_id: 
+  status: MyString
+
+two:
+  data: 2016-02-26
+  time: 2016-02-26 22:54:27
+  idpaciente_id: 
+  iddoctor_id: 
+  status: MyString

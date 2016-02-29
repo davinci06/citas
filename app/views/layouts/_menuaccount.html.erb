@@ -1,0 +1,15 @@
+<% provide(:title, "Log in") %>
+<div class="col-xs-6 col-md-3">
+    <div class="list-group">
+      <h3>Account</h3>
+          <% if logged_in? %>
+            <%= link_to "Citas", current_user, class: "list-group-item list-group-item-success" %>
+            <%= link_to "Profile", current_user, class: "list-group-item list-group-item-success" %>
+            <%= link_to "Settings", edit_user_path(current_user), class: "list-group-item list-group-item-success" %>
+            <%= link_to "Update password", '#', class: "list-group-item list-group-item-success" %>
+          <%= link_to "Log out", logout_path, method: "delete", class: "list-group-item list-group-item-success"%>
+        <% else %>
+          <li><%= link_to "Log in", login_path %></li>
+        <% end %>
+    </div>
+</div>
