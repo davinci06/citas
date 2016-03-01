@@ -20,16 +20,13 @@
           <%= f.phone_field :phone, class: 'form-control' %>
 
           
-          <%= f.label :phone %>
-          <%= f.phone_field :phone, class: 'form-control' %>
+          <%= f.label :address %><br/>
+          <%= f.text_field :address, class: 'form-control' %>
 
-          
-          <%= f.label :phone %>
-          <%= f.phone_field :phone, class: 'form-control' %>
-
-          
-          <%= f.label :phone %>
-          <%= f.phone_field :phone, class: 'form-control' %>
+          <div class="field">
+            <%= f.label :sex %><br/>
+            <%= f.select :sex, [['Elige tu sexo?', nil], 'Male', 'Fale']%>
+          </div>
 
           <%= f.submit "Save changes", class: "btn btn-success btn-lg btn-block" %>
           <% end %>
